@@ -9,15 +9,15 @@ body {
   margin: 0;
   /* font-family: Helvetica; */
   /* Font-Family: 'Source Sans Pro', Sans-Serif; */
-  
+
   Font-Family: 'Raleway', Sans-Serif;
-  Font-Size: 15px; 
+  Font-Size: 15px;
   /* Font-Size: 50px; */
   /* Font-Size: 16px;   */
   /* background: #6a6a6a; */
   line-height: 1.6;
-  background-color: #fdfaf3 ;
-  
+  background-color: #fdfaf3;
+
 }
 
 h1,
@@ -27,17 +27,15 @@ a {
   /* Font-Family: 'Playfair Display', Serif;
   Font-Size: 48px; */
   Font-Family: 'Vollkorn', Serif;
-  
+
 }
 
 h2 {
   text-align: center;
 }
 
-
-
 .header {
-  padding: 20px 0;
+  padding: 10px 0;
   margin: 0 auto;
   max-width: 1150px;
   background-color: #eed79c;
@@ -48,7 +46,7 @@ h2 {
 
 .logo {
   font-size: 28px;
-  font-weight:900;
+  font-weight: 900;
   letter-spacing: .1rem;
   color: #1414B0;
   width: 190px;
@@ -58,22 +56,23 @@ h2 {
   margin-left: 50px;
   padding-top: 0;
   border: 1px solid greenyellow;
-  
+
 }
 
 .header {
   position: relative;
 }
+
 .chef {
   position: absolute;
-  top: 2.1rem;
+  top: 1rem;
   left: 2px;
 }
 
 .nav {
   list-style: none;
   border: 1px solid yellow;
-  
+
 }
 
 .nav li {
@@ -84,7 +83,7 @@ h2 {
   text-decoration: none;
   color: #2727E2;
   font-size: .95rem;
-  font-weight:600;
+  font-weight: 600;
   letter-spacing: .1rem;
   text-transform: uppercase;
   padding: 8px 16px 7px;
@@ -129,6 +128,7 @@ a.icon {
   background-color: #FB8804;
   color: black;
 }
+
 .imgResponse {
   width: 100%;
   max-width: 1100px;
@@ -136,18 +136,17 @@ a.icon {
   margin: 0 auto;
   padding: .7em;
   border: solid 1px #d1d0d0;
-  border-radius: 0 0 3px 3px;
+  border-radius: 0 0 5px 5px;
 }
 
 .feat-img {
   width: 100%;
-  max-width: 100rem;
-  /* max-width: 500px; */
+  max-width: 600px;
   height: auto;
   padding: .7em;
   border: solid 1px #d1d0d0;
   border-radius: 5px;
-  
+
 }
 
 .row {
@@ -156,24 +155,21 @@ a.icon {
   height: auto;
   margin: 0 auto;
 }
+
 .col {
-  padding-right: 5rem;
-  padding-left: 7rem;
-  /* margin: 16px; */
-    
+  padding-right: .5rem;
+  padding-left: .5rem;
+  /* margin: 5px; */
+
   border: 1px solid rgb(224, 195, 31);
 }
 
 .navtop {
   position: fixed;
   width: 100%;
-  z-index: 1
+  top: 0;
+  z-index: 1;
 }
-
-.navtop {
-  top: 0
-}
-
 
 /******************************
 Flexbox Layout Mobile
@@ -184,11 +180,9 @@ Flexbox Layout Mobile
 .nav,
 .imgResponse,
 .row {
-  display:flex;
+  display: flex;
   flex-direction: column;
 }
-
-
 
 .header {
   justify-content: space-between;
@@ -200,33 +194,37 @@ Flexbox Layout Mobile
 }
 
 
+
 @media (max-width: 702px) {
 
-  .nav  {
+
+  .nav {
     padding: 12px 0 12px 0;
     margin: 0 0 0 -10px;
 
   }
+
   .nav li a:hover {
     border-radius: 5px;
     transition: 400ms ease-in-out;
   }
 
 
-  .nav.responsive  {
+  .nav.responsive {
     display: none;
-    
+
 
   }
 
   /* position hamburger icon to right of viewport  */
 
   .icon {
-    display: block;
+    /* display: block; */
     position: absolute;
-    top: 2.5rem;
+    top: 2rem;
     right: 2rem;
   }
+
   .imgResponse {
     display: none;
   }
@@ -236,38 +234,68 @@ Flexbox Layout Mobile
   }
 
   .col-top {
-    margin-top: 17.2rem;
-  }  
-
-   .col-top.responsiveA {
-   margin-top: 3.25rem;
-     
-  }
+    margin-top: 22rem;
   
+  }
+/* This responsiveA is control by javascript  */
+  .col-top.responsiveA {
+    margin-top: 8rem;
+    
+
+  }
+
 }
 
 
 @media all and (min-width: 703px) {
 
-   
+
   .header,
-  .nav,
-  .row {
+  .nav {
     flex-direction: row;
   }
+
 
   .icon {
     display: none;
   }
 
-  .col {
-    flex: 1;
+  .row {
+
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+
+    /* flex-flow: row wrap; */
+    /* justify-content: space-between; */
+
   }
- 
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+
+    border: 1px solid #222;
+  }
+
+  .primary {
+    width: 33.33%;
+  }
+
+  .secondary {
+    flex: 1 40%;
+  }
+
+  .tertiary {
+    width: 33.33%;
+
+  }
+
 }
 
-@media (max-width:992px) and (min-width:702px) {
- .hide-medium {
+@media (max-width:992px) and (min-width:701px) {
+  .hide-medium {
     display: none;
   }
 }
@@ -277,10 +305,23 @@ Flexbox Layout Mobile
     flex: none;
 
   }
-  .secondary {
-    flex: 2;
+
+  .primary {
+    width: 25%;
   }
+
+  .secondary {
+    width: 50%;
+  }
+
+  .tertiary {
+    width: 25%;
+
+  }
+
+
 }
+
 /* This rule ajusts the width of the Header bar */
 
 /* @media all and (min-width: 1030px) {
