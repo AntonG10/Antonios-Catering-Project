@@ -369,10 +369,10 @@ Flexbox Layout Mobile
 
   }
 
-  /* This class rule sticks the footer to bottom fo veiwport*/
-  /* .wrap {
+  /* This class rule sticks the footer to bottom of veiwport*/
+  .wrap {
     min-height: calc(100vh - 110px);
-  } */
+  }
 
 }
 
