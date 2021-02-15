@@ -7,14 +7,8 @@ Base Element Styles
 
 body {
   margin: 0;
-  /* font-family: Helvetica; */
-  /* Font-Family: 'Source Sans Pro', Sans-Serif; */
-
   Font-Family: 'Raleway', Sans-Serif;
   Font-Size: 15px;
-  /* Font-Size: 50px; */
-  /* Font-Size: 16px;   */
-  /* background: #6a6a6a; */
   line-height: 1.6;
   background-color: #fdfaf3;
 
@@ -23,15 +17,52 @@ body {
 h1,
 h2,
 h3,
+h4,
 a {
-  /* Font-Family: 'Playfair Display', Serif;
-  Font-Size: 48px; */
   Font-Family: 'Vollkorn', Serif;
 
 }
 
-h2 {
+h2,
+h3 {
   text-align: center;
+  letter-spacing: 5px;
+  text-decoration: underline;
+
+}
+
+h2 {
+  position: relative;
+}
+
+h2 span {
+  position: absolute;
+  top: -125px;
+}
+
+h4 {
+  position: relative;
+}
+
+h4 span {
+  position: absolute;
+  top: -130px;
+}
+
+
+
+
+h4 {
+  font-size: 1.25rem;
+  text-align: left;
+  letter-spacing: 5px;
+}
+
+
+
+p.text-grey {
+  color: #757575;
+  font-size: 1.2rem;
 }
 
 .header {
@@ -79,6 +110,7 @@ h2 {
   margin: 12px 0 12px 18px;
 }
 
+.top,
 .nav li a {
   text-decoration: none;
   color: #2727E2;
@@ -100,18 +132,7 @@ h2 {
   margin-right: 5px;
 }
 
-/* .nav li:last-child a {
-  background: #FB8804;
-  color: #4683af;
-  border-radius: 2px;
-  transition: 200ms ease-in-out;
-  padding: 8px 16px 7px;
-}
 
-.nav li:last-child a:hover {
-  background:#FB8804 ;
-  color: black;
-} */
 a.icon {
   text-decoration: none;
 }
@@ -130,6 +151,7 @@ a.icon {
 }
 
 .imgResponse {
+  display: block;
   width: 100%;
   max-width: 1100px;
   height: auto;
@@ -137,6 +159,7 @@ a.icon {
   padding: .7em;
   border: solid 1px #d1d0d0;
   border-radius: 0 0 5px 5px;
+
 }
 
 .feat-img {
@@ -149,6 +172,22 @@ a.icon {
 
 }
 
+.feat-img-1 {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  padding: .7em;
+  margin: 0 auto;
+  border: solid 1px #d1d0d0;
+  border-radius: 5px;
+
+}
+
+.opacity-min {
+  opacity: 0.75
+}
+
+
 .row {
   width: 100%;
   max-width: 1100px;
@@ -157,12 +196,13 @@ a.icon {
 }
 
 .col {
+
   padding-right: .5rem;
   padding-left: .5rem;
-  /* margin: 5px; */
-
+  margin-left: 0;
   border: 1px solid rgb(224, 195, 31);
 }
+
 
 .navtop {
   position: fixed;
@@ -171,6 +211,17 @@ a.icon {
   z-index: 1;
 }
 
+/* .main-footer {
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2em 0;
+  background: #f1dfaf;
+} */
+
+
 /******************************
 Flexbox Layout Mobile
 *******************************/
@@ -178,14 +229,15 @@ Flexbox Layout Mobile
 
 .header,
 .nav,
-.imgResponse,
-.row {
+.row,
+.col {
   display: flex;
   flex-direction: column;
 }
 
 .header {
   justify-content: space-between;
+
 }
 
 .nav {
@@ -197,6 +249,16 @@ Flexbox Layout Mobile
 
 @media (max-width: 702px) {
 
+
+  h2 span {
+    position: absolute;
+    top: -500px;
+  }
+
+  h4 span {
+    position: absolute;
+    top: -300px;
+  }
 
   .nav {
     padding: 12px 0 12px 0;
@@ -235,25 +297,33 @@ Flexbox Layout Mobile
 
   .col-top {
     margin-top: 22rem;
-  
-  }
-/* This responsiveA is control by javascript  */
-  .col-top.responsiveA {
-    margin-top: 8rem;
-    
 
   }
+
+  /* This responsiveA is control by javascript  */
+  .col-top.responsiveA {
+    margin-top: 8rem;
+
+
+  }
+
 
 }
 
 
 @media all and (min-width: 703px) {
 
-
+  /* My original nav layout */
   .header,
   .nav {
     flex-direction: row;
   }
+
+  /* For centering .header, */
+  /* .header {
+    flex-direction: column;
+    align-items: center;
+  } */
 
 
   .icon {
@@ -264,20 +334,17 @@ Flexbox Layout Mobile
 
     flex-direction: row;
     /* flex-wrap: wrap; */
-
     /* flex-flow: row wrap; */
     /* justify-content: space-between; */
 
   }
 
   .col {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    
-
+    justify-content: first flex-start;
     border: 1px solid #222;
   }
+
+
 
   .primary {
     width: 33.33%;
@@ -291,6 +358,21 @@ Flexbox Layout Mobile
     width: 33.33%;
 
   }
+
+  .primary-1 {
+    flex: 50%;
+  }
+
+  .secondary-1 {
+    flex: 50%;
+
+
+  }
+
+  /* This class rule sticks the footer to bottom fo veiwport*/
+  /* .wrap {
+    min-height: calc(100vh - 110px);
+  } */
 
 }
 
@@ -319,8 +401,30 @@ Flexbox Layout Mobile
 
   }
 
+  .primary-1 {
+    flex: 60%;
+  }
+
+  .secondary-1 {
+    flex: 40%;
+
+
+  }
+
 
 }
+
+/* justify-content: space-between for new nav bar*/
+/* @media (min-width: 1025px) {
+
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    
+  }
+
+
+} */
 
 /* This rule ajusts the width of the Header bar */
 
