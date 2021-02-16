@@ -51,8 +51,6 @@ h4 span {
 }
 
 
-
-
 h4 {
   font-size: 1.25rem;
   text-align: left;
@@ -104,9 +102,16 @@ p.text-grey {
 .waiter {
   position: absolute;
   top: 7rem;
-  left: calc(100vw - 63%);
-  /* min-height: calc(100vh - 110px); */
+  left: calc(100vw - 64%);
 }
+
+.foodCart {
+  position: absolute;
+  top: .3rem;
+  right: 32rem;
+}
+
+
 
 .nav {
   list-style: none;
@@ -401,11 +406,19 @@ Flexbox Layout Mobile
   }
 }
 
+@media (max-width:1030px) {
+  .foodCart {
+    display: none;
+  }
+}
+
 @media all and (min-width: 1030px) {
   .nav {
     flex: none;
 
   }
+
+
 
   .primary {
     width: 25%;
