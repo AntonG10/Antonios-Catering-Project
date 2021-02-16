@@ -10,6 +10,7 @@ body {
   Font-Family: 'Raleway', Sans-Serif;
   Font-Size: 15px;
   line-height: 1.6;
+  /* font-size: calc(.65rem + .5vw); */
   background-color: #fdfaf3;
 
 }
@@ -100,6 +101,13 @@ p.text-grey {
   left: 2px;
 }
 
+.waiter {
+  position: absolute;
+  top: 7rem;
+  left: calc(100vw - 63%);
+  /* min-height: calc(100vh - 110px); */
+}
+
 .nav {
   list-style: none;
   border: 1px solid yellow;
@@ -135,6 +143,16 @@ p.text-grey {
 
 a.icon {
   text-decoration: none;
+}
+
+/* position hamburger icon to right of viewport  */
+
+.icon {
+  /* display: block; */
+  position: absolute;
+  top: 2rem;
+  left: calc(100vw - 12%);
+  /* right: 2rem; */
 }
 
 .fa-bars {
@@ -260,6 +278,8 @@ Flexbox Layout Mobile
     top: -300px;
   }
 
+
+
   .nav {
     padding: 12px 0 12px 0;
     margin: 0 0 0 -10px;
@@ -274,18 +294,13 @@ Flexbox Layout Mobile
 
   .nav.responsive {
     display: none;
-
-
   }
 
-  /* position hamburger icon to right of viewport  */
-
-  .icon {
-    /* display: block; */
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
+  .waiter.responsiveB {
+    display: none;
   }
+
+
 
   .imgResponse {
     display: none;
@@ -330,6 +345,10 @@ Flexbox Layout Mobile
     display: none;
   }
 
+  .waiter {
+    display: none;
+  }
+
   .row {
 
     flex-direction: row;
@@ -369,7 +388,7 @@ Flexbox Layout Mobile
 
   }
 
-  /* This class rule sticks the footer to bottom of veiwport*/
+  /* This class rule sticks the footer to bottom fo veiwport*/
   .wrap {
     min-height: calc(100vh - 110px);
   }
