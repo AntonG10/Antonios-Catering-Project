@@ -36,7 +36,7 @@ h2 {
   position: relative;
 }
 
-h2 span {
+h2 .about {
   position: absolute;
   top: -125px;
 }
@@ -45,10 +45,16 @@ h4 {
   position: relative;
 }
 
-h4 span {
+h4 .menu {
   position: absolute;
   top: -130px;
 }
+
+h4 .contact {
+  position: absolute;
+  top: -130px;
+}
+
 
 
 h4 {
@@ -206,6 +212,17 @@ a.icon {
 
 }
 
+.feat-img-2 {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  padding: .7em;
+  margin: 0 auto;
+  border: solid 1px #d1d0d0;
+  border-radius: 5px;
+
+}
+
 .opacity-min {
   opacity: 0.75
 }
@@ -232,6 +249,143 @@ a.icon {
   width: 100%;
   top: 0;
   z-index: 1;
+}
+
+.primary-1 h4 {
+  line-height: .75;
+}
+
+
+.primary-4 h4 {
+  text-align: center;
+  line-height: 1.4;
+}
+
+
+.primary-4 p::first-line {
+  line-height: 1.6;
+  font-weight: bold;
+
+}
+
+.primary-4 p {
+  color: #706767;
+  line-height: 1;
+}
+
+.text-left {
+  text-align: left !important;
+
+
+}
+
+.contact-banner-text-h2 {
+  text-align: left;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.contact-banner-text-span {
+  font-size: 15px;
+  Font-Family: 'Raleway',
+    Sans-Serif;
+}
+
+.fa-bread-slice {
+  color: #674023;
+  padding: 0 .5rem 0 .25rem;
+  font-size: 2rem;
+}
+
+.primary-2,
+.primary-3,
+.primary-4 {
+  background: #f8f8f8 url(img/pattern.jpg) left top repeat;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .05) inset,
+    0 -5px 15px 0 rgba(0, 0, 0, .05) inset;
+}
+
+.form-input {
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  width: 100%
+}
+
+.form-button {
+  border: none;
+  padding: 8px 16px;
+  vertical-align: middle;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  background-color: #a97142;
+}
+
+.form-button:hover {
+  color: #fff;
+  background-color: #1414B0;
+  border-radius: 5px;
+}
+
+
+
+.padding-8 {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+.padding-16 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.padding-20 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.padding-top-20 {
+  padding-top: 1.25rem;
+}
+
+.padding-top-24 {
+  padding-top: 1.5rem;
+}
+
+.padding-top-30 {
+  padding-top: 1.875rem;
+}
+
+.padding-top-32 {
+  padding-top: 2rem;
+}
+
+.padding-bottom-8 {
+  padding-bottom: 0.5rem;
+}
+
+.padding-bottom-16 {
+  padding-bottom: 1rem;
+}
+
+.padding-bottom-20 {
+  padding-bottom: 1.25rem;
+}
+
+.padding-bottom-24 {
+  padding-bottom: 1.5rem;
+}
+
+.padding-bottom-30 {
+  padding-bottom: 1.875rem;
+}
+
+.padding-bottom-32 {
+  padding-bottom: 2rem;
 }
 
 .main-footer {
@@ -273,14 +427,19 @@ Flexbox Layout Mobile
 @media (max-width: 702px) {
 
 
-  h2 span {
+  h2 .about {
     position: absolute;
     top: -500px;
   }
 
-  h4 span {
+  h4 .menu {
     position: absolute;
     top: -300px;
+  }
+
+  h4 .contact {
+    position: absolute;
+    top: -297px;
   }
 
 
@@ -327,6 +486,21 @@ Flexbox Layout Mobile
 
   }
 
+  .contact-banner-text-span {
+    display: block;
+    padding-left: 3.2rem;
+  }
+
+  .feat-img-1 {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    padding: .7em;
+    margin: 0 auto;
+    border: solid 1px #d1d0d0;
+    border-radius: 5px;
+
+  }
 
 }
 
@@ -364,7 +538,7 @@ Flexbox Layout Mobile
   }
 
   .col {
-    justify-content: first flex-start;
+    justify-content: flex-start;
     border: 1px solid #222;
   }
 
@@ -389,8 +563,18 @@ Flexbox Layout Mobile
 
   .secondary-1 {
     flex: 50%;
+  }
 
+  .primary-2 {
+    width: 100%;
+  }
 
+  .primary-3 {
+    flex: 50%;
+  }
+
+  .primary-4 {
+    flex: 50%;
   }
 
   /* This class rule sticks the footer to bottom fo veiwport*/
@@ -439,9 +623,22 @@ Flexbox Layout Mobile
 
   .secondary-1 {
     flex: 40%;
-
-
   }
+
+  .primary-2 {
+
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .primary-3 {
+    flex: 60%;
+  }
+
+  .primary-4 {
+    flex: 40%;
+  }
+
 
 
 }
