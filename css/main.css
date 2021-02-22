@@ -228,61 +228,6 @@ a.icon {
 
 }
 
-.padding-8 {
-  padding-top: .5rem;
-  padding-bottom: .5rem;
-}
-
-.padding-16 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.padding-20 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
-.padding-top-20 {
-  padding-top: 1.25rem;
- }
-
- .padding-top-24 {
-   padding-top: 1.5rem;
- }
-
- .padding-top-30 {
-   padding-top: 1.875rem;
- }
- .padding-top-32 {
-   padding-top: 2rem;
- }
- 
- .padding-bottom-8 {
-   padding-bottom: 0.5rem;
- }
-
- .padding-bottom-16 {
-   padding-bottom: 1rem;
- }
-
-.padding-bottom-20 {
-  padding-bottom: 1.25rem;
-}
-
-.padding-bottom-24 {
-  padding-bottom: 1.5rem;
-}
-
-.padding-bottom-30 {
-  padding-bottom: 1.875rem;
-}
-
-.padding-bottom-32 {
-  padding-bottom: 2rem;
-}
-
-
 .opacity-min {
   opacity: 0.75
 }
@@ -599,6 +544,7 @@ Flexbox Layout Mobile
 
   .secondary {
     width: 33.33%;
+    order: -1;
   }
 
   .tertiary {
@@ -616,6 +562,7 @@ Flexbox Layout Mobile
 
     .primary-1 {
       width: 50%;
+      order: 1;
     }
 
     .secondary-1 {
@@ -667,6 +614,7 @@ Flexbox Layout Mobile
 
   .secondary {
     width: 50%;
+    order:initial;
   }
 
   .tertiary {
@@ -676,6 +624,7 @@ Flexbox Layout Mobile
 
   .primary-1 {
     flex: 60%;
+    order: -1;
   }
 
   .secondary-1 {
