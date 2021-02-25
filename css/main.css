@@ -43,11 +43,29 @@ h3 {
   text-decoration: underline;
 
 }
-h2{ position:relative; }
-h2 .about { position:absolute; top:-125px;}
-h4{ position:relative; }
-h4 .menu{ position:absolute; top:-130px;}
-h4 .contact{ position:absolute; top:-130px;}
+
+h2 {
+  position: relative;
+}
+
+h2 .about {
+  position: absolute;
+  top: -125px;
+}
+
+h4 {
+  position: relative;
+}
+
+h4 .menu {
+  position: absolute;
+  top: -130px;
+}
+
+h4 .contact {
+  position: absolute;
+  top: -130px;
+}
 
 
 
@@ -61,6 +79,15 @@ h4 {
 
 p.text-grey {
   color: #757575;
+  font-size: 1.2rem;
+}
+
+p.text-grey:last-child {
+  text-decoration: line-through;
+}
+
+p.text-blue {
+  color: #1414B0;
   font-size: 1.2rem;
 }
 
@@ -123,8 +150,8 @@ p.text-grey {
   margin: 12px 0 12px 18px;
 }
 
-.top, 
-.nav li a  {
+.top,
+.nav li a {
   text-decoration: none;
   color: #2727E2;
   font-size: .95rem;
@@ -150,15 +177,15 @@ a.icon {
   text-decoration: none;
 }
 
-  /* position hamburger icon to right of viewport  */
+/* position hamburger icon to right of viewport  */
 
-  .icon {
-    /* display: block; */
-    position: absolute;
-    top: 2rem;
-    left: calc(100vw - 12%);
-    /* right: 2rem; */
-  }
+.icon {
+  /* display: block; */
+  position: absolute;
+  top: 2rem;
+  left: calc(100vw - 12%);
+  /* right: 2rem; */
+}
 
 .fa-bars {
   color: #c28434;
@@ -182,7 +209,7 @@ a.icon {
   padding: .7em;
   border: solid 1px #d1d0d0;
   border-radius: 0 0 5px 5px;
-  
+
 }
 
 .feat-img {
@@ -241,7 +268,7 @@ a.icon {
 }
 
 .col {
-  
+
   padding-right: .5rem;
   padding-left: .5rem;
   margin-left: 0;
@@ -259,25 +286,26 @@ a.icon {
 
 
 
-.primary-4 h4 {
+.contact-form-section-picture h4 {
   text-align: center;
   line-height: 1.4;
 }
 
 
-.primary-4 p::first-line {
+.contact-form-section-picture p::first-line {
   line-height: 1;
   font-weight: bold;
-  
+
 }
-.primary-4 p {
+
+.contact-form-section-picture p {
   color: #706767;
   line-height: 1;
 }
 
 .text-left {
   text-align: left !important;
-  
+
 }
 
 .contact-banner-text-h2 {
@@ -289,7 +317,7 @@ a.icon {
 .contact-banner-text-span {
   font-size: 15px;
   Font-Family: 'Raleway',
-  Sans-Serif;
+    Sans-Serif;
 }
 
 .fa-bread-slice {
@@ -297,19 +325,22 @@ a.icon {
   padding: 0 .5rem 0 .25rem;
   font-size: 2rem;
 }
-.primary-2,
-.primary-3,
-.primary-4{
+
+.banner-section,
+.contact-form-section,
+.contact-form-section-picture {
   background: #f8f8f8 url(img/pattern.jpg) left top repeat;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .05) inset,
-  0 -5px 15px 0 rgba(0, 0, 0, .05) inset;
+    0 -5px 15px 0 rgba(0, 0, 0, .05) inset;
 }
-.form-input{
+
+.form-input {
   padding: 8px;
   border: none;
   border-bottom: 1px solid #ccc;
   width: 100%
 }
+
 .form-button {
   border: none;
   padding: 8px 16px;
@@ -318,8 +349,8 @@ a.icon {
   text-align: center;
   cursor: pointer;
   white-space: nowrap;
-  margin-top: 16px ;
-  margin-bottom: 16px ;
+  margin-top: 16px;
+  margin-bottom: 16px;
   background-color: #a97142;
 }
 
@@ -356,26 +387,27 @@ a.icon {
 
 .padding-top-20 {
   padding-top: 1.25rem;
- }
+}
 
- .padding-top-24 {
-   padding-top: 1.5rem;
- }
+.padding-top-24 {
+  padding-top: 1.5rem;
+}
 
- .padding-top-30 {
-   padding-top: 1.875rem;
- }
- .padding-top-32 {
-   padding-top: 2rem;
- }
- 
- .padding-bottom-8 {
-   padding-bottom: 0.5rem;
- }
+.padding-top-30 {
+  padding-top: 1.875rem;
+}
 
- .padding-bottom-16 {
-   padding-bottom: 1rem;
- }
+.padding-top-32 {
+  padding-top: 2rem;
+}
+
+.padding-bottom-8 {
+  padding-bottom: 0.5rem;
+}
+
+.padding-bottom-16 {
+  padding-bottom: 1rem;
+}
 
 .padding-bottom-20 {
   padding-bottom: 1.25rem;
@@ -393,10 +425,10 @@ a.icon {
   padding-bottom: 2rem;
 }
 
- /* This class rule sticks the footer to bottom fo veiwport*/
- .wrap {
-   min-height: calc(100vh - 110px);
- }
+/* This class rule sticks the footer to bottom fo veiwport*/
+.wrap {
+  min-height: calc(100vh - 110px);
+}
 
 /******************************
 Flexbox Layout Mobile
@@ -413,7 +445,7 @@ Flexbox Layout Mobile
 
 .header {
   justify-content: space-between;
-  
+
 }
 
 .nav {
@@ -425,13 +457,24 @@ Flexbox Layout Mobile
 
 @media (max-width: 702px) {
 
-  
-  h2 .about{ position:absolute; top: -500px;}
-  h4 .menu{ position:absolute; top: -300px;}
-  h4 .contact{ position:absolute; top:-297px;}
 
- 
-  
+  h2 .about {
+    position: absolute;
+    top: -500px;
+  }
+
+  h4 .menu {
+    position: absolute;
+    top: -300px;
+  }
+
+  h4 .contact {
+    position: absolute;
+    top: -297px;
+  }
+
+
+
   .nav {
     padding: 12px 0 12px 0;
     margin: 0 0 0 -10px;
@@ -473,10 +516,12 @@ Flexbox Layout Mobile
 
 
   }
+
   .contact-banner-text-span {
-   display: block;
-   padding-left: 3.2rem;
+    display: block;
+    padding-left: 3.2rem;
   }
+
   .feat-img-1 {
     width: 100%;
     max-width: 300px;
@@ -489,8 +534,8 @@ Flexbox Layout Mobile
   }
 
   .form-button {
-   display: block;
-   margin: 0 auto;
+    display: block;
+    margin: 0 auto;
   }
 
 }
@@ -498,7 +543,7 @@ Flexbox Layout Mobile
 
 @media all and (min-width: 703px) {
 
-/* My original nav layout */
+  /* My original nav layout */
   .header,
   .nav {
     flex-direction: row;
@@ -514,9 +559,10 @@ Flexbox Layout Mobile
   .icon {
     display: none;
   }
-   .waiter {
-     display: none;
-   }
+
+  .waiter {
+    display: none;
+  }
 
   .row {
 
@@ -528,59 +574,42 @@ Flexbox Layout Mobile
   }
 
   .col {
-    justify-content:  flex-start;
+    justify-content: flex-start;
     border: 1px solid #222;
   }
-
-
-
-  .primary {
+  .about-section-picture {
     width: 33.33%;
   }
 
-  /* .secondary {
-    flex: 1 40%;
-  } */
-
-  .secondary {
+  .about-section-content {
     width: 33.33%;
     order: -1;
   }
 
-  .tertiary {
+  .about-section-content-picture {
     width: 33.33%;
-
   }
 
-  /* .primary-1 {
-    flex: 50%;
+  .menu-section-content {
+    width: 50%;
+    order: 1;
   }
 
-  .secondary-1 {
-    flex: 50%;
-  } */
-
-    .primary-1 {
-      width: 50%;
-      order: 1;
-    }
-
-    .secondary-1 {
-      width: 50%;
-    }
-
-  .primary-2 {
-    width: 100%;
-  } 
-
-  .primary-3 {
-   width: 50%;
-  }
-
-  .primary-4 {
+  .menu-section-content-picture {
     width: 50%;
   }
- 
+
+  .banner-section{
+    width: 100%;
+  }
+
+  .contact-form-section {
+    width: 50%;
+  }
+
+  .contact-form-section-picture {
+    width: 50%;
+  }
 
 }
 
@@ -588,64 +617,60 @@ Flexbox Layout Mobile
   .hide-medium {
     display: none;
   }
-  main p h4{
-    text-align:justify;
+
+  main p h4 {
+    text-align: justify;
   }
 
 }
 
 @media (max-width:1030px) {
-    .foodCart {
-      display: none;
-    }
+  .foodCart {
+    display: none;
+  }
 }
 
 @media all and (min-width: 1030px) {
   .nav {
     flex: none;
-
   }
 
-  
-
-  .primary {
+  .about-section-picture {
     width: 25%;
   }
 
-  .secondary {
+  .about-section-content {
     width: 50%;
-    order:initial;
+    order: initial;
   }
 
-  .tertiary {
+  .about-section-content-picture {
     width: 25%;
 
   }
 
-  .primary-1 {
+  .menu-section-content {
     flex: 60%;
     order: -1;
   }
 
-  .secondary-1 {
+  .menu-section-content-picture {
     flex: 40%;
   }
 
-  .primary-2{
-    
-     flex-direction: column;
-     align-items: center;
+  .banner-section {
+
+    flex-direction: column;
+    align-items: center;
   }
 
-   .primary-3 {
-     flex: 60%;
-   }
+  .contact-form-section {
+    flex: 60%;
+  }
 
-   .primary-4 {
-     flex: 40%;
-   }
-
-
+  .contact-form-section-picture {
+    flex: 40%;
+  }
 
 }
 

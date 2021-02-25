@@ -16,13 +16,15 @@
 <body>
   <div class="wrap">
     <h2 id="home" id="top" style="margin-top: -20px;"></h2>
-    <div class="navtop">
 
+    <!-- Header banner with nav controls and logo and images -->
+    <div class="navtop">
       <header class="header">
         <img class="foodCart" id="Food Cart" src="img/Food Cart.svg" alt="Waiter">
         <img class="waiter" id="waiter" src="img/Waiter.svg" alt="Waiter">
         <img class="chef" src="img/Chef.svg" alt="Chef">
         <h1 class="logo">Antonio's Cafe</h1>
+
         <!-- Hamburger Control Using JavaScript onclick function -->
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i class="fas fa-bars"></i>
@@ -35,21 +37,24 @@
         </ul>
       </header>
     </div>
+    <!-- Main picture -->
     <div>
       <img class="imgResponse padding-top-32" src="img/pexels-waldemar-brandt-2290070blur.jpg" alt="Cafe Bar Setting">
     </div>
 
     <!-- About Section -->
+
+    <!--about-section picture-->
     <div class="row">
-      <div class="primary col hide-small">
+      <div class="about-section-picture col hide-small">
         <h2>Great food</h2>
         <img class="feat-img " src="img/pexels-chevanon-photography-323682c.jpg" alt="Drinks and eats" width="300"
           height="400">
       </div>
-      <!--/.primary-->
+      <!--/end about-section picture-->
 
-
-      <div class="secondary col">
+      <!--about-section content-->
+      <div class="about-section-content col">
         <h2 class="col-top" id="sec-col"><span class="about" id="about"></span>About the Cafe</h2>
         <p>Everything in this cafe is worth waiting in line for.</p>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, fugit neque, architecto repellat suscipit
@@ -62,51 +67,52 @@
           beans pastry browniesugar plum pastry bear claw tiramisu tootsie roll. Tootsie roll wafer I love chocolate
           donuts. sapiente nihil, similique minus possimus magnam hic reprehenderit. Explicabo, iure iste</p>
       </div>
-      <!--/.secondary-->
+      <!--end about-section content-->
 
-      <div class="tertiary col hide-small">
-        <h2>Great food</h2>
+      <!--about section content picture-->
+      <div class="about-section-content-picture col hide-small">
+        <h2>Fine Dinning</h2>
         <img class="feat-img " src="img/pexels-rajesh-tp-1624487b.jpg" alt="Drinks and eats" width="300" height="400">
-
       </div>
-      <!--/.tertiary-->
-
+     <!--end about-section-content-picture-->
     </div>
 
     <!-- Menu Section -->
+    <!--menu section content-->
     <div class="row">
       <h4><span class="menu" id="menu"></span></h4>
-      <div class="primary-1 col">
+      <div class="menu-section-content col">
         <h2>Le Menu</h2>
         <main></main> <!--/Insert JavaScript Multidimensional Array Food Items -->
       </div>
-      <!--/.primary-1-->
+      <!--end menu-section-content-picture-->
 
-      <div class="secondary-1 col ">
+      <!--menu section content picture-->
+        <div class="menu-section-content-picture col ">
         <h2>Great food</h2>
         <img class="feat-img-1" src="img/pexels-william-choquette-2641886a.jpg" alt="Drinks and eats" width="300" height="400">
-
       </div>
-      <!--/.secondary-1-->
+      <!--end menu-section-content-picture-->
     </div>
+    <!--end menu-section-content-->
 
-    <!-- contact Section -->
+    <!-- contact Banner Section -->
     <div class="row">
       <h4><span class="contact" id="contact"></span></h4>
-      <div class="primary-2 col padding-16">
-
+      <div class="banner-section col padding-16">
         <h2 class="contact-banner-text-h2"><i class="fas fa-bread-slice"></i>Contact Us/<span
             class="contact-banner-text-span"><i>Make your reservations here</i></span></h2>
       </div>
-
     </div>
+    <!-- end contact Banner Section -->
 
-
+    <!-- contact Form Section -->
     <div class="row">
-      <div class="primary-3 col">
+      <div class="contact-form-section col">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper <a href="">suscipit lobortis</a> nisl ut aliquip ex ea commodo consequat.</p>
         <p class="hide-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper <a href="">suscipit lobortis</a> nisl ut aliquip ex ea commodo consequat.</p>
         <p class="hide-medium hide-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper <a href="">suscipit lobortis</a> nisl ut aliquip ex ea commodo consequat.</p>
+
         <form action="/action_page.php" target="_blank" >
           <p><input class="form-input padding-16" type="text" placeholder="Name" required name="Name"></p>
           <p><input class="form-input padding-16" type="number" placeholder="How many people" required name="People">
@@ -118,8 +124,10 @@
           <p><button class="form-button" type="submit">SEND MESSAGE</button></p>
         </form>
       </div>
+      <!-- end contact Form Section -->
 
-      <div class="primary-4 col padding-bottom-16">
+      <!-- contact Form Section picture-->
+      <div class="contact-form-section-picture col padding-bottom-16">
         <h4>We Are Here</h4>
         <img class="feat-img-2" src="img/mapd.jpg" alt="Resturant Location" width="300" height="300">
         <h4 class="hide-small">We Are Here</h4>
@@ -128,8 +136,7 @@
                     <p>Via Principe Amedeo 9 <br> 10100, Torino, TO, Ky</p>
                     <p>Phone: 0039 333 12 68 347</p>
       </div>
-      <!--/.primary-4-->
-
+      <!-- end contact form Section picture-->
     </div>
     <!--/End Contact Section-->
   </div>
