@@ -1,23 +1,23 @@
 // Hamburger toggle control
-function myFunction() {
+function hamburgerControl() {
   // Gather elements by id attributes
   var x = document.getElementById("myTopnav");
   var b = document.getElementById("sec-col");
   var c = document.getElementById("waiter");
 
-  // This dicision displays on and off the nav anchors in mobile @media (max-width: 702px)
+  // This dicision displays on and off the nav items in mobile @media (max-width: 702px) the class responsive is dynamically inserted into html to accomplish this control
   if (x.className === "nav") {
     x.className += " responsive";
   } else {
     x.className = "nav";
   }
-  // This dicision controls the margin top of the about section in mobile @media (max-width: 702px)
+  // This dicision controls the margin top of the about section in mobile @media (max-width: 702px) class responsiveA is dynamically inserted into html to accomplish this control
   if (b.className === "col-top") {
     b.className += " responsiveA";
   } else {
     b.className = "col-top";
   }
-  // This dicision displays on and off the waiter logo in mobile @media (max-width: 702px)
+  // This dicision displays on and off the waiter logo in mobile @media (max-width: 702px) class responsiveB is dynamically inserted into html to accomplish this control
   if (c.className === "waiter") {
     c.className += " responsiveB";
   } else {
@@ -54,7 +54,7 @@ function createListItems(arr) {
 
   for (let i = 0; i < arr.length; i++) {
     if (arr[i][2] === "5.50") {
-      const newPrice = 5.5 - 5.5 * 0.1;
+      const newPrice = 5.5 - 5.5 * 0.1; // 10 % store offer
       items += `<h4>${arr[i][0]}</h4> <p class="text-grey">${arr[i][1]} <strong><s>${arr[i][2]}</s></strong> <strong style = 'color: blue;'>${newPrice}</strong></p>`;
     } else {
       items += `<h4>${arr[i][0]}</h4> <p class="text-grey">${arr[i][1]} <strong>${arr[i][2]}</strong></p>`;
@@ -119,21 +119,65 @@ storeoffer = `<h4 class="padding-16-all">10% Off Bread Basket Items - Offer Expi
 
 document.querySelector("main").insertAdjacentHTML("afterbegin", storeoffer);
 
-// Automatic Slideshow - change image every 3 seconds
+// Automatic Continuous Slideshow function
+// Declare variables and set initial values to zero and call functions
 var myIndex = 0;
+var myIndexA = 0;
+var myIndexB = 0;
 carousel();
+carouselA();
+carouselB();
 
 function carousel() {
   var i;
+  // This class selection represents an HTMLCollection of array-like objects called mySlides equaling four index items 0-3 this is assigned to var x
   var x = document.getElementsByClassName("mySlides");
 
+  // This for loop iterate through the array of objects and the x.length property returns the number of items in the collection that the for loop compares to. This part of the code keeps the picture slides from cascading down the web page, using display = none.
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
+
+  // This part of the function continuously indexs through each slide item and displays them as the main picture on the web page for 7 seconds.  This is accomplished using the setTimeout() method that calls the function carousel after 7000 milliseconds or 7 seconds has elasped.
   myIndex++;
   if (myIndex > x.length) {
     myIndex = 1;
   }
   x[myIndex - 1].style.display = "block";
-  setTimeout(carousel, 3000);
+  setTimeout(carousel, 7000);
 }
+
+function carouselA() {
+  var i;
+  var x = document.getElementsByClassName("mySlidesA");
+
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndexA++;
+  if (myIndexA > x.length) {
+    myIndexA = 1;
+  }
+  x[myIndexA - 1].style.display = "block";
+  setTimeout(carouselA, 9000);
+}
+
+function carouselB() {
+  var i;
+  var x = document.getElementsByClassName("mySlidesB");
+
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndexB++;
+  if (myIndexB > x.length) {
+    myIndexB = 1;
+  }
+  x[myIndexB - 1].style.display = "block";
+  setTimeout(carouselB, 5000);
+}
+
+// This code selects two of the contacts forms input elements placeholder attribute and styles the background color lightgrey
+const input = document.querySelectorAll("input[placeholder]");
+input[0].style.backgroundColor = "lightgrey";
+input[2].style.backgroundColor = "lightgrey";

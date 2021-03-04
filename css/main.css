@@ -8,8 +8,7 @@ Base Element Styles
 body {
   margin: 0;
   font-family: "Raleway", Sans-Serif;
-  font-size: 15px;
-  /* font-size: calc(.65rem + .5vw); */
+  font-size: 1rem;
   background-color: #fdfaf3;
 }
 
@@ -34,12 +33,13 @@ h4 {
   line-height: 1;
 }
 
+h1,
 h2,
 h3 {
   text-align: center;
   letter-spacing: 5px;
 }
-
+/* These rules make my nav buttons link to the correct areas on the screen */
 h2 {
   position: relative;
 }
@@ -78,18 +78,20 @@ p.text-blue {
   color: #1414b0;
   font-size: 1.2rem;
 }
-
+/* ----------------------------- Page Elements -------------------------- */
 .header {
   padding: 10px 0;
   margin: 0 auto;
   max-width: 1150px;
   background-color: #eed79c;
   border-radius: 5px;
-  border: 1px solid red;
+  box-shadow: inset 0 0 5px 5px rgba(90, 71, 6, 0.8);
+  /* border: 1px solid red; */
 }
 
+/* Antonio's logo in the header styles */
 .logo {
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 900;
   letter-spacing: 0.1rem;
   color: #1414b0;
@@ -99,9 +101,10 @@ p.text-blue {
   overflow: hidden;
   margin-left: 50px;
   padding-top: 0;
-  border: 1px solid greenyellow;
+  /* border: 1px solid greenyellow; */
 }
 
+/* ---- Chef svg Logo image positioning ---- */
 .header {
   position: relative;
 }
@@ -114,7 +117,8 @@ p.text-blue {
 
 .waiter {
   position: absolute;
-  top: 7rem;
+  top: 4.5rem;
+  /* using calc medthod the  waiter icon will change position based on viewport width size */
   left: calc(100vw - 64%);
 }
 
@@ -124,9 +128,10 @@ p.text-blue {
   right: 32rem;
 }
 
+/* ---- Navigation Styles---- */
 .nav {
   list-style: none;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
 }
 
 .nav li {
@@ -151,34 +156,63 @@ p.text-blue {
   transition: 300ms ease-in-out;
 }
 
+/* This rule gives the contact button "last-child" .313rem of right margin. 
+This preventa the button from being right against the header banner  */
 .nav li:last-child {
-  margin-right: 5px;
+  margin-right: 0.313rem;
 }
 
-a.icon {
-  text-decoration: none;
-}
-
-/* position hamburger icon to right of viewport  */
+/* position hamburger icon to right of viewport and style */
 
 .icon {
-  /* display: block; */
   position: absolute;
   top: 2rem;
+  /* using calc medthod the  hamburger icon will change position based on viewport width size */
   left: calc(100vw - 12%);
-  /* right: 2rem; */
 }
 
 .fa-bars {
   color: #c28434;
   padding: 0.15rem;
   border: solid 1px #afa6a6;
-  font-size: 25px;
+  font-size: 1.563rem;
 }
 
 .fa-bars:hover {
   background-color: #fb8804;
   color: black;
+}
+a.icon {
+  text-decoration: none;
+}
+/* ------------------------------- Page Elements --------------------------- */
+/* position text in the main picture and style */
+.main-images {
+  position: relative;
+}
+
+.display-bottommiddle {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0%);
+}
+
+.display-middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text-white {
+  color: #fff;
+  text-shadow: 2px 3px 5px rgba(1, 7, 19, 0.5);
+}
+
+.bg-color {
+  background-color: rgba(27, 26, 26, 0.1);
+  border-radius: 3px;
 }
 
 .imgResponse {
@@ -231,10 +265,6 @@ a.icon {
   border-radius: 5px;
 }
 
-.opacity-min {
-  opacity: 0.75;
-}
-
 .row {
   width: 100%;
   max-width: 1100px;
@@ -245,8 +275,11 @@ a.icon {
 .col {
   padding-right: 0.5rem;
   padding-left: 0.5rem;
+  padding-bottom: 1.5rem;
   margin-left: 0;
-  border: 1px solid rgb(224, 195, 31);
+  /* border: 1px solid rgb(224, 195, 31); */
+  border-bottom: 0.031rem solid rgb(214, 212, 212);
+  border-top: 0.031rem solid rgb(214, 212, 212);
 }
 
 .navtop {
@@ -282,7 +315,7 @@ a.icon {
 }
 
 .contact-banner-text-span {
-  font-size: 15px;
+  font-size: 1rem;
   font-family: "Raleway", Sans-Serif;
 }
 
@@ -336,62 +369,7 @@ a.icon {
   background: #f1dfaf;
 }
 
-.padding-8 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.padding-16 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.padding-20 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
-.padding-top-20 {
-  padding-top: 1.25rem;
-}
-
-.padding-top-24 {
-  padding-top: 1.5rem;
-}
-
-.padding-top-30 {
-  padding-top: 1.875rem;
-}
-
-.padding-top-32 {
-  padding-top: 2rem;
-}
-
-.padding-bottom-8 {
-  padding-bottom: 0.5rem;
-}
-
-.padding-bottom-16 {
-  padding-bottom: 1rem;
-}
-
-.padding-bottom-20 {
-  padding-bottom: 1.25rem;
-}
-
-.padding-bottom-24 {
-  padding-bottom: 1.5rem;
-}
-
-.padding-bottom-30 {
-  padding-bottom: 1.875rem;
-}
-
-.padding-bottom-32 {
-  padding-bottom: 2rem;
-}
-
-/* This class rule sticks the footer to bottom fo veiwport*/
+/* This class rule sticks the footer to bottom of the veiwport*/
 .wrap {
   min-height: calc(100vh - 110px);
 }
@@ -417,20 +395,28 @@ Flexbox Layout Mobile
   justify-content: space-around;
 }
 
+/* ================================================= 
+   Media Queries
+==================================================== */
+
+/* Target viewport sizes less than 702px
+This CSS will apply styles only if your browser's 
+viewport width is equal to or narrower than 702px: */
+
 @media (max-width: 702px) {
   h2 .about {
-    position: absolute;
-    top: -500px;
-  }
-
-  h4 .menu {
     position: absolute;
     top: -300px;
   }
 
+  h4 .menu {
+    position: absolute;
+    top: -240px;
+  }
+
   h4 .contact {
     position: absolute;
-    top: -297px;
+    top: -240px;
   }
 
   .nav {
@@ -442,16 +428,15 @@ Flexbox Layout Mobile
     border-radius: 5px;
     transition: 400ms ease-in-out;
   }
-
+  /* the class responsive is controlled by javascript when the hamburger is onclicked */
   .nav.responsive {
     display: none;
   }
-
+  /* the class responsiveB is controlled by javascript when the hamburger is onclicked */
   .waiter.responsiveB {
     display: none;
   }
-
-  .imgResponse {
+  .main-images {
     display: none;
   }
 
@@ -463,9 +448,9 @@ Flexbox Layout Mobile
     margin-top: 22rem;
   }
 
-  /* This responsiveA is controlled by javascript when hamburger is onclicked */
+  /* The class responsiveA is controlled by javascript when hamburger is onclicked */
   .col-top.responsiveA {
-    margin-top: 8rem;
+    margin-top: 11rem;
   }
 
   .contact-banner-text-span {
@@ -487,20 +472,26 @@ Flexbox Layout Mobile
     display: block;
     margin: 0 auto;
   }
+
+  .about-section-content {
+    background: url(../img/pexels-waldemar-brandt-2290070blur.jpg) center /
+      cover no-repeat;
+    color: white;
+    /* filter: sepia(50%); */
+    filter: grayscale(50%);
+  }
 }
 
+/* Target viewport sizes 703px and wider 
+This CSS will apply styles only if your browser's 
+viewport width is equal to or wider than 703px:*/
+
 @media all and (min-width: 703px) {
-  /* My original nav layout */
+  /* nav layout medium to large sizes*/
   .header,
   .nav {
     flex-direction: row;
   }
-
-  /* For centering .header, */
-  /* .header {
-    flex-direction: column;
-    align-items: center;
-  } */
 
   .icon {
     display: none;
@@ -519,7 +510,7 @@ Flexbox Layout Mobile
 
   .col {
     justify-content: flex-start;
-    border: 1px solid #222;
+    /* border-bottom: 1px solid rgb(167, 165, 165); */
   }
   .about-section-picture {
     width: 33.33%;
@@ -556,6 +547,11 @@ Flexbox Layout Mobile
   }
 }
 
+/* Target a viewport range wider than 701px and narrower than 992px 
+This CSS will apply styles only if your browser's 
+viewport width is equal to or wider than 701px:
+AND equal to or narrower than 991px:*/
+
 @media (max-width: 992px) and (min-width: 701px) {
   .hide-medium {
     display: none;
@@ -566,12 +562,19 @@ Flexbox Layout Mobile
   }
 }
 
+/* Target viewport sizes less than 1030px
+This CSS will apply styles only if your browser's 
+viewport width is equal to or narrower than 1030px: */
+
 @media (max-width: 1030px) {
   .foodCart {
     display: none;
   }
 }
 
+/* Target viewport sizes 1030px and wider 
+This CSS will apply styles only if your browser's 
+viewport width is equal to or wider than 1030pxpx:*/
 @media all and (min-width: 1030px) {
   .nav {
     flex: none;
@@ -638,3 +641,161 @@ Flexbox Layout Mobile
     
 
 } */
+
+/* Utilites */
+.t-large {
+  font-size: 1.125rem;
+}
+
+.t-xlarge {
+  font-size: 1.5rem;
+}
+.t-xxlarge {
+  font-size: 2.25rem;
+}
+.t-xxxlarge {
+  font-size: 3rem;
+}
+.t-jumbo {
+  font-size: 4rem;
+}
+
+.padding-8 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.padding-16 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.padding-20 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.padding-32 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.padding-36 {
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+}
+.padding-40 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.padding-top-20 {
+  padding-top: 1.25rem;
+}
+
+.padding-top-24 {
+  padding-top: 1.5rem;
+}
+
+.padding-top-30 {
+  padding-top: 1.875rem;
+}
+
+.padding-top-32 {
+  padding-top: 2rem;
+}
+
+.padding-bottom-8 {
+  padding-bottom: 0.5rem;
+}
+
+.padding-bottom-16 {
+  padding-bottom: 1rem;
+}
+
+.padding-bottom-20 {
+  padding-bottom: 1.25rem;
+}
+
+.padding-bottom-24 {
+  padding-bottom: 1.5rem;
+}
+
+.padding-bottom-30 {
+  padding-bottom: 1.875rem;
+}
+
+.padding-bottom-32 {
+  padding-bottom: 2rem;
+}
+.padding-RL-8 {
+  padding: 0 0.5rem;
+}
+.padding-RL-16 {
+  padding: 0 1rem;
+}
+.animate-fading-10 {
+  animation: fading 10s infinite;
+}
+
+.animate-fading-5 {
+  animation: fading 5s infinite;
+}
+
+@keyframes fading {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-opacity {
+  animation: opac 0.8s;
+}
+
+@keyframes opac {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-opacity-2 {
+  animation: opac 2s;
+}
+
+@keyframes opac {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-opacity-m {
+  animation: opac 1s;
+}
+
+@keyframes opac {
+  from {
+    opacity: 0.9;
+  }
+
+  to {
+    opacity: 1.5;
+  }
+}
+.opacity-min {
+  opacity: 0.75;
+}

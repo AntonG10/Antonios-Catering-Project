@@ -36,22 +36,58 @@
           <h1 class="logo">Antonio's Cafe</h1>
 
           <!-- Hamburger Control Using JavaScript onclick function -->
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <a
+            href="javascript:void(0);"
+            class="icon"
+            onclick="hamburgerControl()"
+          >
             <i class="fas fa-bars"></i>
           </a>
           <ul class="nav" id="myTopnav">
-            <li><a href="#home">Home</a></li>
+            <li class="hide-small"><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#menu">Menu</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </header>
       </div>
+
       <!-- Main picture -->
-      <div>
+      <div class="main-images" style="padding-top: 6.4rem">
+        <div class="display-middle text-white hide-small">
+          <h1 class="bg-color padding-RL-8" style="font-size: 5vmax">
+            Antonio's Cafe
+          </h1>
+          <p
+            class="bg-color"
+            style="letter-spacing: 0.1rem; text-align: center; font-size: 2vmax"
+          >
+            <b>The Best Fine Dining in the Ville.</b>
+          </p>
+        </div>
         <img
-          class="imgResponse padding-top-32"
+          class="imgResponse mySlidesB"
           src="img/pexels-waldemar-brandt-2290070blur.jpg"
+          alt="Cafe Bar Setting"
+        />
+        <img
+          class="imgResponse mySlidesB"
+          src="img/pexels-daria-shevtsova-704982BB.jpg"
+          alt="Cafe Bar Setting"
+        />
+        <img
+          class="imgResponse mySlidesB"
+          src="img/pexels-kaboompics-com-6267BB.jpg"
+          alt="Cafe Bar Setting"
+        />
+        <img
+          class="imgResponse mySlidesB"
+          src="img/pexels-lisa-fotios-776538BB.jpg"
+          alt="Cafe Bar Setting"
+        />
+        <img
+          class="imgResponse mySlidesB"
+          src="img/pexels-sindre-strøm-1398266BB.jpg"
           alt="Cafe Bar Setting"
         />
       </div>
@@ -63,8 +99,29 @@
         <div class="about-section-picture col hide-small">
           <h2>Great food</h2>
           <img
-            class="feat-img"
+            class="feat-img mySlides animate-opacity"
             src="img/pexels-chevanon-photography-323682c.jpg"
+            alt="Drinks and eats"
+            width="300"
+            height="400"
+          />
+          <img
+            class="feat-img mySlides animate-opacity"
+            src="img/pexels-ekaterina-bolovtsova-5702789A.jpg"
+            alt="Drinks and eats"
+            width="300"
+            height="400"
+          />
+          <img
+            class="feat-img mySlides animate-opacity"
+            src="img/pexels-flo-dahm-541216A.jpg"
+            alt="Drinks and eats"
+            width="300"
+            height="400"
+          />
+          <img
+            class="feat-img mySlides animate-opacity"
+            src="img/pexels-polina-kovaleva-5420369A.jpg"
             alt="Drinks and eats"
             width="300"
             height="400"
@@ -100,13 +157,35 @@
         <div class="about-section-content-picture col hide-small">
           <h2>Fine Dinning</h2>
           <img
-            class="feat-img"
+            class="feat-img mySlidesA animate-opacity-2"
             src="img/pexels-rajesh-tp-1624487b.jpg"
             alt="Drinks and eats"
             width="300"
             height="400"
           />
+          <img
+            class="feat-img mySlidesA animate-opacity-2"
+            src="img/pexels-gerald-jake-abangan-2689419A.jpg"
+            alt="Drinks and eats"
+            width="300"
+            height="400"
+          />
+          <img
+            class="feat-img mySlidesA animate-opacity-2"
+            src="img/pexels-mister-mister-3434523A.jpg"
+            alt="Drinks and eats"
+            width="300"
+            height="400"
+          />
+          <img
+            class="feat-img mySlidesA animate-opacity-2"
+            src="img/pexels-partha-sekhar-borah-1988624A.jpg"
+            alt="Drinks and eats"
+            width="300"
+            height="400"
+          />
         </div>
+        <hr />
         <!--end about-section-content-picture-->
       </div>
 
@@ -116,8 +195,8 @@
         <h4><span class="menu" id="menu"></span></h4>
         <div class="menu-section-content col">
           <h2>Le Menu</h2>
-          <main></main>
           <!--/Insert JavaScript Multidimensional Array Food Items -->
+          <main></main>
         </div>
         <!--end menu-section-content-picture-->
 
