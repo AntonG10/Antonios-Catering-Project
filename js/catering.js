@@ -1,27 +1,29 @@
 // Hamburger toggle control
 function hamburgerControl() {
-  // Gather elements by id attributes
-  var x = document.getElementById("myTopnav");
-  var b = document.getElementById("sec-col");
-  var c = document.getElementById("waiter");
+  // Gather elements by id attributes and assign variables
+  let myTopNav = document.getElementById("myTopNav");
+  let aboutSection = document.getElementById("aboutSection");
+  let waiter = document.getElementById("waiter");
 
-  // This dicision displays on and off the nav items in mobile @media (max-width: 702px) the class responsive is dynamically inserted into html to accomplish this control
-  if (x.className === "nav") {
-    x.className += " responsive";
+  // This decision displays on and off the nav items in mobile, the class "navControl" is dynamically inserted into html to accomplish this control myTopNav.className stores the elements class name that toggles between "nav" or "nav navControl" when the hamburger icon is clicked.
+  if (myTopNav.className === "nav") {
+    myTopNav.className += " navControl"; // myTopNav.className changes class to "nav navControl" this removes nav links when the hamburger icon is clicked see main.css
   } else {
-    x.className = "nav";
+    myTopNav.className = "nav"; // myTopNav.className changes class back to "nav" this displays nav links when the hamburger icon is clicked see main.css
   }
-  // This dicision controls the margin top of the about section in mobile @media (max-width: 702px) class responsiveA is dynamically inserted into html to accomplish this control
-  if (b.className === "col-top") {
-    b.className += " responsiveA";
+
+  // This decision controls the margin top of the about section in mobile, the class "aboutSectionControl" is dynamically inserted into html to accomplish this control aboutSection.className stores the elements class name that could be "about-section-top" or "about-section-top aboutSectionControl" when the hamburger icon is clicked..
+  if (aboutSection.className === "about-section-top") {
+    aboutSection.className += " aboutSectionControl"; // aboutSection.className changes class to "about-section-top aboutSectionControl" this affects the about section margin-top when the hamburger icon is clicked see main.css
   } else {
-    b.className = "col-top";
+    aboutSection.className = "about-section-top"; // aboutSection.className changes class back to "about-section-top" affects margin-top when the hamburger icon is clicked see main.css
   }
-  // This dicision displays on and off the waiter logo in mobile @media (max-width: 702px) class responsiveB is dynamically inserted into html to accomplish this control
-  if (c.className === "waiter") {
-    c.className += " responsiveB";
+
+  // This decision displays on and off the waiter logo in mobile, the class "waiterControl" is dynamically inserted into html to accomplish this control waiter.className stores the elements class name that could be "waiter" or "waiter waiterControl" when the hamburger icon is clicked.
+  if (waiter.className === "waiter") {
+    waiter.className += " waiterControl"; // waiter.className changes class to "waiter waiterControl" this removes the waiter icon when the hamburger icon is clicked see main.css
   } else {
-    c.className = "waiter";
+    waiter.className = "waiter"; // waiter.className changes class back to "waiter" this displays the waiter icon when the hamburger icon is clicked see main.css
   }
 }
 
@@ -48,7 +50,7 @@ const foodlist = [
   ["Blueberry Pancakes", "With syrup, butter and lots of berries", "8.50"],
 ];
 
-// Function to iterate through the array and create html for the food items and store offer price
+// Function to iterate through the foodlist array and create html for the food items and store offer price
 function createListItems(arr) {
   let items = "";
 
@@ -63,14 +65,16 @@ function createListItems(arr) {
   return items;
 }
 
-// Insert foodlist into the main element in the menu section content in index.html file
-document.querySelector("main").innerHTML = `${createListItems(foodlist)}`;
+// Insert foodlist into the main element in the menu section content in the index.html file
+const foodItems = createListItems(foodlist);
+document.querySelector("main").innerHTML = foodItems;
 
 // JavaScript for store offer
-// Declare variables
-var weekFromToday, day, date, month, year, monthNames, dayNames;
-var storeoffer = "";
-var d = new Date();
+// Declare variables, today stores todays date.
+let weekFromToday, day, date, month, year, monthNames, dayNames;
+let storeOffer = "";
+// creates a new date object with the current date and time:
+let today = new Date();
 
 // Create arrays to hold the names of months and days
 monthNames = [
@@ -102,82 +106,86 @@ dayNames = [
 // minutes = 60 * 1000
 // hours = minutes * 60
 // days = hours * 24
-// weekFromToday = using getTime() producses store offer period 7 days time (added in milliseconds)
-weekFromToday = new Date(d.getTime() + 7 * 24 * 60 * 60 * 1000);
+// weekFromToday = using getTime() method produces the store offer period 7 days time (added in milliseconds) today.getime() returns today's date + 7 days.
+weekFromToday = new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000);
 
 // Collect the parts of the date to show on the page
+
+//  The getDay() method returns the day of the week (from 0 to 6) for the specified date. Note: Sunday is 0, Monday is 1, and so on.
 day = dayNames[weekFromToday.getDay()];
+
+//  The getDate() method returns the day of the month (from 1 to 31) for the specified date.
 date = weekFromToday.getDate();
+
+// The getMonth() method returns the month (from 0 to 11) for the specified date, according to local time. Note: January is 0, February is 1, and so on.
 month = monthNames[weekFromToday.getMonth()];
+
+// The getFullYear() method returns the year (four digits for dates between year 1000 and 9999) of the specified date. For example 2021
 year = weekFromToday.getFullYear();
 
 // Create the message with the parts of the date to show on the page using template literal
-storeoffer = `<h4 class="padding-16-all">10% Off Bread Basket Items - Offer Expires Next:</h4>
+storeOffer = `<h4>10% Off Bread Basket Items - Offer Expires Next:</h4>
   <p class= "text-blue ">(${day} ${month}, ${date} - ${year} in 7 days!)</p>`;
 
 //The insertAdjacentHTML() method inserts the above text as HTML, into a specified position that being 'afterbegin' - After the beginning of the element (as the first child). This inserts the storeoffer text as the first child of the main element.
-
-document.querySelector("main").insertAdjacentHTML("afterbegin", storeoffer);
+document.querySelector("main").insertAdjacentHTML("afterbegin", storeOffer);
 
 // Automatic Continuous Slideshow function
 // Declare variables and set initial values to zero and call functions
-var myIndex = 0;
-var myIndexA = 0;
-var myIndexB = 0;
-carousel();
+let myIndexA = 0;
+let myIndexB = 0;
+let myIndexC = 0;
 carouselA();
 carouselB();
-
-function carousel() {
-  var i;
-  // This class selection represents an HTMLCollection of array-like objects called mySlides equaling four index items 0-3 this is assigned to var x
-  var x = document.getElementsByClassName("mySlides");
-
-  // This for loop iterate through the array of objects and the x.length property returns the number of items in the collection that the for loop compares to. This part of the code keeps the picture slides from cascading down the web page, using display = none.
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-
-  // This part of the function continuously indexs through each slide item and displays them as the main picture on the web page for 7 seconds.  This is accomplished using the setTimeout() method that calls the function carousel after 7000 milliseconds or 7 seconds has elasped.
-  myIndex++;
-  if (myIndex > x.length) {
-    myIndex = 1;
-  }
-  x[myIndex - 1].style.display = "block";
-  setTimeout(carousel, 7000);
-}
+carouselC();
 
 function carouselA() {
-  var i;
-  var x = document.getElementsByClassName("mySlidesA");
+  // This class selection represents an HTMLCollection of array-like objects called mySlides equaling four index items 0-3 four images, this is assigned to mySlidesA
+  const mySlidesA = document.getElementsByClassName("mySlidesA");
 
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
+  // This for loop iterate through the array of objects and the mySlides.length property retrieves the number of items in the collection that the for loop compares to. This part of the code keeps the picture slides from cascading down the web page, using display = none.
+  for (let i = 0; i < mySlidesA.length; i++) {
+    mySlidesA[i].style.display = "none";
   }
+
+  // This part of the function continuously indexes through each slide item and displays them as the main picture on the web page for 7 seconds.  This is accomplished using the setTimeout() method that calls the function carouselA after 7000 milliseconds or 7 seconds has elasped.
   myIndexA++;
-  if (myIndexA > x.length) {
-    myIndexA = 1;
+  if (myIndexA > mySlidesA.length) {
+    myIndexA = 1; // When the if decision is true myIndexA  is greater than mySlides.length this sets the first slide picture
   }
-  x[myIndexA - 1].style.display = "block";
-  setTimeout(carouselA, 9000);
+  mySlidesA[myIndexA - 1].style.display = "block";
+  setTimeout(carouselA, 7000);
 }
 
 function carouselB() {
-  var i;
-  var x = document.getElementsByClassName("mySlidesB");
+  const mySlidesB = document.getElementsByClassName("mySlidesB");
 
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
+  for (let i = 0; i < mySlidesB.length; i++) {
+    mySlidesB[i].style.display = "none";
   }
   myIndexB++;
-  if (myIndexB > x.length) {
+  if (myIndexB > mySlidesB.length) {
     myIndexB = 1;
   }
-  x[myIndexB - 1].style.display = "block";
-  setTimeout(carouselB, 5000);
+  mySlidesB[myIndexB - 1].style.display = "block";
+  setTimeout(carouselB, 9000);
 }
 
-// This code selects two of the contacts forms input elements placeholder attribute and styles the background color lightgrey
+function carouselC() {
+  const mySlidesC = document.getElementsByClassName("mySlidesC");
+
+  for (let i = 0; i < mySlidesC.length; i++) {
+    mySlidesC[i].style.display = "none";
+  }
+  myIndexC++;
+  if (myIndexC > mySlidesC.length) {
+    myIndexC = 1;
+  }
+  mySlidesC[myIndexC - 1].style.display = "block";
+  setTimeout(carouselC, 5000);
+}
+
+// This code selects two of the contact forms input elements the placeholder attribute and styles the background color lightgrey
 const input = document.querySelectorAll("input[placeholder]");
 input[0].style.backgroundColor = "lightgrey";
 input[2].style.backgroundColor = "lightgrey";
