@@ -5,21 +5,21 @@ function hamburgerControl() {
   let aboutSection = document.getElementById("aboutSection");
   let waiter = document.getElementById("waiter");
 
-  // This decision displays on and off the nav items in mobile, the class "navControl" is dynamically inserted into html to accomplish this control myTopNav.className stores the elements class name that toggles between "nav" or "nav navControl" when the hamburger icon is clicked.
+  // This decision displays on and off the nav items in mobile, the class "navControl" is dynamically inserted into the html's element to accomplish this control myTopNav.className stores the elements class name that toggles between "nav" or "nav navControl" when the hamburger icon is clicked.
   if (myTopNav.className === "nav") {
     myTopNav.className += " navControl"; // myTopNav.className changes class to "nav navControl" this removes nav links when the hamburger icon is clicked see main.css
   } else {
     myTopNav.className = "nav"; // myTopNav.className changes class back to "nav" this displays nav links when the hamburger icon is clicked see main.css
   }
 
-  // This decision controls the margin top of the about section in mobile, the class "aboutSectionControl" is dynamically inserted into html to accomplish this control aboutSection.className stores the elements class name that could be "about-section-top" or "about-section-top aboutSectionControl" when the hamburger icon is clicked..
+  // This decision controls the margin top of the about section in mobile, the class "aboutSectionControl" is dynamically inserted into html's element to accomplish this control aboutSection.className stores the elements class name that could be "about-section-top" or "about-section-top aboutSectionControl" when the hamburger icon is clicked..
   if (aboutSection.className === "about-section-top") {
     aboutSection.className += " aboutSectionControl"; // aboutSection.className changes class to "about-section-top aboutSectionControl" this affects the about section margin-top when the hamburger icon is clicked see main.css
   } else {
     aboutSection.className = "about-section-top"; // aboutSection.className changes class back to "about-section-top" affects margin-top when the hamburger icon is clicked see main.css
   }
 
-  // This decision displays on and off the waiter logo in mobile, the class "waiterControl" is dynamically inserted into html to accomplish this control waiter.className stores the elements class name that could be "waiter" or "waiter waiterControl" when the hamburger icon is clicked.
+  // This decision displays on and off the waiter logo in mobile, the class "waiterControl" is dynamically inserted into html's element to accomplish this control waiter.className stores the elements class name that could be "waiter" or "waiter waiterControl" when the hamburger icon is clicked.
   if (waiter.className === "waiter") {
     waiter.className += " waiterControl"; // waiter.className changes class to "waiter waiterControl" this removes the waiter icon when the hamburger icon is clicked see main.css
   } else {
@@ -56,8 +56,14 @@ function createListItems(arr) {
 
   for (let i = 0; i < arr.length; i++) {
     if (arr[i][2] === "5.50") {
-      const newPrice = 5.5 - 5.5 * 0.1; // 10 % store offer
-      items += `<h4>${arr[i][0]}</h4> <p class="text-grey">${arr[i][1]} <strong><s>${arr[i][2]}</s></strong> <strong style = 'color: blue;'>${newPrice}</strong></p>`;
+      const newPrice = 5.5 - 5.5 * 0.2; // 20% off store offer
+      items += `<h4>${arr[i][0]}</h4> <p class="text-grey">${
+        arr[i][1]
+      } <strong><s>${
+        arr[i][2]
+      }</s></strong> <strong style = 'color:#1414b0;'>${newPrice.toFixed(
+        2
+      )}</strong></p>`;
     } else {
       items += `<h4>${arr[i][0]}</h4> <p class="text-grey">${arr[i][1]} <strong>${arr[i][2]}</strong></p>`;
     }
@@ -124,8 +130,8 @@ month = monthNames[weekFromToday.getMonth()];
 year = weekFromToday.getFullYear();
 
 // Create the message with the parts of the date to show on the page using template literal
-storeOffer = `<h4>10% Off Bread Basket Items - Offer Expires Next:</h4>
-  <p class= "text-blue ">(${day} ${month}, ${date} - ${year} in 7 days!)</p>`;
+storeOffer = `<h4><span style = 'color: #1414b0; font: italic bold 1.5rem "Raleway", Sans-Serif; letter-spacing: .1rem;'>20%</span> Off Bread Basket Items - Offer Expires Next:</h4>
+  <p class= "text-blue" style = 'letter-spacing: .1rem; font-weight: bold;'>(${day} ${month} ${date}, ${year} in 7 days!)</p>`;
 
 //The insertAdjacentHTML() method inserts the above text as HTML, into a specified position that being 'afterbegin' - After the beginning of the element (as the first child). This inserts the storeoffer text as the first child of the main element.
 document.querySelector("main").insertAdjacentHTML("afterbegin", storeOffer);
@@ -185,7 +191,13 @@ function carouselC() {
   setTimeout(carouselC, 5000);
 }
 
-// This code selects two of the contact forms input elements the placeholder attribute and styles the background color lightgrey
-const input = document.querySelectorAll("input[placeholder]");
+// This code selects two of the contact forms input elements and styles the background color lightgrey
+const input = document.querySelectorAll(".form-input");
 input[0].style.backgroundColor = "lightgrey";
+input[0].style.color = "blue";
 input[2].style.backgroundColor = "lightgrey";
+
+// Reload the web page every hour to update the store offer
+setInterval(() => {
+  location.reload();
+}, 1000 * 60 * 60);

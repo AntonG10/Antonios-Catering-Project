@@ -70,13 +70,13 @@ h4 {
 }
 
 p.text-grey {
-  color: #757575;
+  color: #2b2a2a;
   font-size: 1.2rem;
 }
 
 p.text-blue {
   color: #1414b0;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
 }
 /* ----------------------------- Page Elements -------------------------- */
 .header {
@@ -231,8 +231,9 @@ a.icon {
   max-width: 600px;
   height: auto;
   padding: 0.7em;
-  border: solid 1px #d1d0d0;
+  border: solid 1px #7e7c7c;
   border-radius: 5px;
+  /* background-color: rgba(241, 234, 234, 0.8); */
 }
 
 .feat-img-1 {
@@ -241,7 +242,7 @@ a.icon {
   height: auto;
   padding: 0.7em;
   margin: 0 auto;
-  border: solid 1px #d1d0d0;
+  border: solid 1px #7e7c7c;
   border-radius: 5px;
 }
 
@@ -274,8 +275,8 @@ a.icon {
 
 .col,
 .menu-picture-col {
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
   padding-bottom: 1.5rem;
   margin-left: 0;
   /* border: 1px solid rgb(224, 195, 31); */
@@ -306,7 +307,7 @@ a.icon {
 }
 
 .text-left {
-  text-align: left !important;
+  align-self: flex-start;
 }
 
 .contact-banner-text-h2 {
@@ -329,9 +330,17 @@ a.icon {
 .banner-section,
 .contact-form-section,
 .contact-form-section-picture {
-  background: #f8f8f8 url(img/pattern.jpg) left top repeat;
+  background: #f8f8f8 url(../img/pattern.jpg) left top repeat;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.05) inset,
     0 -5px 15px 0 rgba(0, 0, 0, 0.05) inset;
+}
+.about-section-content,
+.about-section-picture,
+.about-section-content-picture,
+.menu-section-content,
+.menu-section-content-picture {
+  background: #f8f8f8 url(../img/sepia-marble-paperA.jpg) left top repeat;
+  filter: sepia(15%);
 }
 
 .form-input {
@@ -460,13 +469,14 @@ viewport width is equal to or narrower than 702px: */
     padding-left: 3.2rem;
   }
 
-  .feat-img-1 {
+  .feat-img-1,
+  .feat-img {
     width: 100%;
     max-width: 300px;
     height: auto;
     padding: 0.7em;
     margin: 0 auto;
-    border: solid 1px #d1d0d0;
+    border: solid 1px #7e7c7c;
     border-radius: 5px;
   }
 
@@ -494,11 +504,11 @@ viewport width is equal to or wider than 703px:*/
   .nav {
     flex-direction: row;
   }
-
+  /* Remove hamburger icon in medium to large veiwports */
   .icon {
     display: none;
   }
-
+  /* Remove waiter icon in medium to large veiwports */
   .waiter {
     display: none;
   }
@@ -521,7 +531,7 @@ viewport width is equal to or wider than 703px:*/
 
   .about-section-content {
     width: 33.33%;
-    order: -1;
+    order: -1; /* The order property specifies the order of a flexible item relative to the rest of the flexible items inside the same container. */
   }
 
   .about-section-content-picture {
@@ -529,10 +539,11 @@ viewport width is equal to or wider than 703px:*/
   }
   .menu-picture-col {
     justify-content: center;
+    align-items: center;
   }
   .menu-section-content {
     width: 70%;
-    order: 1;
+    order: 1; /* The order property specifies the order of a flexible item relative to the rest of the flexible items inside the same container. */
   }
 
   .menu-section-content-picture {
@@ -581,6 +592,7 @@ viewport width is equal to or narrower than 1030px: */
 This CSS will apply styles only if your browser's 
 viewport width is equal to or wider than 1030pxpx:*/
 @media all and (min-width: 1030px) {
+  /* flex-none to prevent the nav flex items from growing or shrinking */
   .nav {
     flex: none;
   }
@@ -591,7 +603,7 @@ viewport width is equal to or wider than 1030pxpx:*/
 
   .about-section-content {
     width: 50%;
-    order: initial;
+    order: initial; /* The order property specifies the order of a flexible item relative to the rest of the flexible items inside the same container. */
   }
 
   .about-section-content-picture {
@@ -600,7 +612,7 @@ viewport width is equal to or wider than 1030pxpx:*/
 
   .menu-section-content {
     width: 70%;
-    order: -1;
+    order: -1; /* The order property specifies the order of a flexible item relative to the rest of the flexible items inside the same container. */
   }
 
   .menu-section-content-picture {
