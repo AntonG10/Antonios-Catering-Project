@@ -12,3 +12,4 @@ I use a java script Multidimensional Array to populate the food menu section of 
 I use java script to calculate and populate the store offer on the food menu section of the web page.
 I use java script to control an automatic continuous image slide show for the main and menu pictures.
 I use java script to style two of the contact form input fields name and date turning them lightgrey.
+I use Java script to reload the web page every hour to update the store offer.
